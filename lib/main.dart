@@ -49,10 +49,24 @@ class MyHomePage extends StatelessWidget {
               onPressed: (){}),
         ),
         body: Container(
-          color: Colors.lightBlueAccent,
+          decoration: BoxDecoration(
+            color: Colors.lightBlueAccent,
+            shape: BoxShape.circle,
+            border: Border.all(color: Colors.green, width: 3),
+            boxShadow: const [
+              BoxShadow(
+                offset: Offset(3,6),
+                blurRadius: 10,
+                color: Colors.black
+              )
+            ]
+          ),
           margin: const EdgeInsets.all(10),
           child: const Center(
-              child: Text('Welcome', style: TextStyle(fontSize: 40),)
+              child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Welcome', style: TextStyle(fontSize: 40))
+              ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
