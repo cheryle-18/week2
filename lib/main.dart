@@ -48,8 +48,12 @@ class MyHomePage extends StatelessWidget {
               icon: const Icon(Icons.menu, color: Colors.white),
               onPressed: (){}),
         ),
-        body: const Center(
-          child: Text('Welcome')
+        body: Container(
+          color: Colors.lightBlueAccent,
+          margin: const EdgeInsets.all(10),
+          child: const Center(
+              child: Text('Welcome', style: TextStyle(fontSize: 40),)
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
